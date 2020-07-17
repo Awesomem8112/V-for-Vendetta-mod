@@ -1,0 +1,138 @@
+focus_tree = {
+	id = Russia's
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUS
+		}
+	}
+	#Focus for Helping the American rebels?
+	focus = {
+		id = RUS_helping_the_american_rebels
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_our_leader_takes_over }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Send supplies
+	focus = {
+		id = RUS_send_supplies
+		icon = GFX_goal_unknown
+		x = 6
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_helping_the_american_rebels }
+		mutually_exclusive = { focus = RUS_dont_call_back }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Operations in Eastern Europe
+	focus = {
+		id = RUS_operations_in_eastern_europe
+		icon = GFX_goal_unknown
+		x = 11
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_our_leader_takes_over }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Duma panics
+	focus = {
+		id = RUS_the_duma_panics
+		icon = GFX_goal_unknown
+		x = 11
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_oh_no_britain_is_free }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Our glorious leader
+	focus = {
+		id = RUS_our_glorious_leader
+		icon = GFX_goal_unknown
+		x = 11
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Quelling dissent
+	focus = {
+		id = RUS_quelling_dissent
+		icon = GFX_goal_unknown
+		x = 15
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_our_leader_takes_over }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Oh no, Britain is free
+	focus = {
+		id = RUS_oh_no_britain_is_free
+		icon = GFX_goal_unknown
+		x = 11
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_our_glorious_leader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Our leader takes over
+	focus = {
+		id = RUS_our_leader_takes_over
+		icon = GFX_goal_unknown
+		x = 11
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_the_duma_panics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Don't call back
+	focus = {
+		id = RUS_dont_call_back
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = RUS_helping_the_american_rebels }
+		mutually_exclusive = { focus = RUS_send_supplies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

@@ -1,0 +1,519 @@
+focus_tree = {
+	id = Britain's
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	#Focus for Asking for more volunteers
+	focus = {
+		id = ENG_asking_for_more_volunteers
+		icon = GFX_goal_unknown
+		x = 12
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_focus_on_military 
+			focus = ENG_focus_on_civilians 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Focus on Military
+	focus = {
+		id = ENG_focus_on_military
+		icon = GFX_goal_unknown
+		x = 14
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_asking_for_volunteers }
+		mutually_exclusive = { focus = ENG_focus_on_civilians }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Focus on civilians
+	focus = {
+		id = ENG_focus_on_civilians
+		icon = GFX_goal_unknown
+		x = 12
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_asking_for_volunteers }
+		mutually_exclusive = { focus = ENG_focus_on_military }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Asking for volunteers
+	focus = {
+		id = ENG_asking_for_volunteers
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_reclamation_war }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= 10000
+		}
+	}
+
+	#Focus for The Reclamation war
+	focus = {
+		id = ENG_the_reclamation_war
+		icon = GFX_goal_unknown
+		x = 13
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for First things first
+	focus = {
+		id = ENG_first_things_first
+		icon = GFX_goal_unknown
+		x = 8
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_a_legislative_branch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Conservative majority
+	focus = {
+		id = ENG_conservative_majority
+		icon = GFX_goal_unknown
+		x = 8
+		y = 12
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_legislative_elections }
+		mutually_exclusive = { focus = ENG_liberal_majority }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Socialist majority
+	focus = {
+		id = ENG_socialist_majority
+		icon = GFX_goal_unknown
+		x = 14
+		y = 12
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_legislative_elections }
+		mutually_exclusive = { focus = ENG_liberal_majority }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Liberal majority
+	focus = {
+		id = ENG_liberal_majority
+		icon = GFX_goal_unknown
+		x = 2
+		y = 12
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_legislative_elections }
+		mutually_exclusive = { 
+			focus = ENG_conservative_majority 
+		}
+		mutually_exclusive = { 
+			focus = ENG_socialist_majority 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Legislative elections
+	focus = {
+		id = ENG_legislative_elections
+		icon = GFX_goal_unknown
+		x = 8
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_the_path_to_a_united_future }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war= no
+		}
+	}
+
+	#Focus for Prime Minister Cameron
+	focus = {
+		id = ENG_prime_minister_cameron
+		icon = GFX_goal_unknown
+		x = 27
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_elections }
+		mutually_exclusive = { 
+			focus = ENG_prime_minister_corbyn 
+		}
+		mutually_exclusive = { 
+			focus = ENG_prime_minister_finch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Prime Minister Finch
+	focus = {
+		id = ENG_prime_minister_finch
+		icon = GFX_goal_unknown
+		x = 17
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_elections }
+		mutually_exclusive = { 
+			focus = ENG_prime_minister_corbyn 
+		}
+		mutually_exclusive = { 
+			focus = ENG_prime_minister_cameron 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A people's face
+	focus = {
+		id = ENG_a_peoples_face
+		icon = GFX_goal_unknown
+		x = 16
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_prime_minister_finch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Setting up embassies
+	focus = {
+		id = ENG_setting_up_embassies
+		icon = GFX_goal_unknown
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_contacting_the_world }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Putting the revolts down
+	focus = {
+		id = ENG_putting_the_revolts_down
+		icon = GFX_goal_unknown
+		x = 8
+		y = 7
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_minor_onbase_revolts }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The war is lost...
+	focus = {
+		id = ENG_the_war_is_lost
+		icon = GFX_goal_unknown
+		x = 14
+		y = 9
+		cost = 1
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ENG_the_war_is_won }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= -0.05
+		}
+	}
+
+	#Focus for Contacting the cities
+	focus = {
+		id = ENG_contacting_the_cities
+		icon = GFX_goal_unknown
+		x = 6
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_first_things_first }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Contacting the military
+	focus = {
+		id = ENG_contacting_the_military
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_first_things_first }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Britain is free!
+	focus = {
+		id = ENG_britain_is_free
+		icon = GFX_goal_unknown
+		x = 13
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for What do we do now?
+	focus = {
+		id = ENG_what_do_we_do_now
+		icon = GFX_goal_unknown
+		x = 13
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_britain_is_free }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A decision to be made
+	focus = {
+		id = ENG_a_decision_to_be_made
+		icon = GFX_goal_unknown
+		x = 13
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_what_do_we_do_now }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A legislative branch!
+	focus = {
+		id = ENG_a_legislative_branch
+		icon = GFX_goal_unknown
+		x = 8
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_a_decision_to_be_made }
+		mutually_exclusive = { focus = ENG_elections }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Pardon guilty police officers
+	focus = {
+		id = ENG_pardon_guilty_police_officers
+		icon = GFX_goal_unknown
+		x = 18
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_prime_minister_finch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The war is won!
+	focus = {
+		id = ENG_the_war_is_won
+		icon = GFX_goal_unknown
+		x = 12
+		y = 9
+		cost = 1
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = ENG_the_war_is_lost }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability= 0.05
+		}
+	}
+
+	#Focus for Elections!
+	focus = {
+		id = ENG_elections
+		icon = GFX_goal_unknown
+		x = 17
+		y = 3
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_a_decision_to_be_made }
+		mutually_exclusive = { focus = ENG_a_legislative_branch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for gaining guns
+	focus = {
+		id = ENG_gaining_guns
+		icon = GFX_goal_unknown
+		x = 14
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_focus_on_military 
+			focus = ENG_focus_on_civilians 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Desperate times
+	focus = {
+		id = ENG_desperate_times
+		icon = GFX_goal_unknown
+		x = 13
+		y = 8
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_asking_for_more_volunteers 
+			focus = ENG_gaining_guns 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			surrender_progress> 0.5
+		}
+	}
+
+	#Focus for Contacting the world
+	focus = {
+		id = ENG_contacting_the_world
+		icon = GFX_goal_unknown
+		x = 10
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_first_things_first }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The people celebrate!
+	focus = {
+		id = ENG_the_people_celebrate
+		icon = GFX_goal_unknown
+		x = 6
+		y = 7
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_contacting_the_cities }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Minor on-base revolts
+	focus = {
+		id = ENG_minor_onbase_revolts
+		icon = GFX_goal_unknown
+		x = 8
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_contacting_the_military }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The path to a united future
+	focus = {
+		id = ENG_the_path_to_a_united_future
+		icon = GFX_goal_unknown
+		x = 8
+		y = 8
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ENG_the_people_celebrate 
+		}
+		prerequisite = { 
+			focus = ENG_putting_the_revolts_down 
+		}
+		prerequisite = { 
+			focus = ENG_setting_up_embassies 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Prime Minister Corbyn
+	focus = {
+		id = ENG_prime_minister_corbyn
+		icon = GFX_goal_unknown
+		x = 22
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ENG_elections }
+		mutually_exclusive = { 
+			focus = ENG_prime_minister_finch 
+		}
+		mutually_exclusive = { 
+			focus = ENG_prime_minister_cameron 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }
